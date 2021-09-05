@@ -59,7 +59,7 @@ async function run() {
             if ((err.toString().includes('exit code 2') || err.toString().includes('exit code 1'))
                     && String(failAction).toLowerCase() === 'true') {
                 console.log(`[info] By default ZAP Docker container will fail if it identifies any alerts during the scan!`);
-                core.setFailed('Scan action failed as ZAP has identified alerts, starting to analyze the results. ' + err.toString());
+                //core.setFailed('Scan action failed as ZAP has identified alerts, starting to analyze the results. ' + err.toString());
             }else {
                 console.log('Scanning process completed, starting to analyze the results!')
             }
